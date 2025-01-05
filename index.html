@@ -1,101 +1,156 @@
 <style>
-.column-container {
-  position: relative;
-  margin-bottom: auto;
-  display: flex;
-  flex-direction: row;
-  overflow: auto;
-  padding: 13px 0 0;
-}
-
-.highlight-box {
-  position: sticky;
-  margin-top: 20px;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  z-index: 10;
-  background-color: rgb(219, 63, 63);
-}
-
-.accent-text {
-  position: sticky;
-  height: auto;
-  font-size: 23px;
-  width: auto;
-  flex-grow: 1;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  background: rgb(0, 255, 178) no-repeat center/cover;
-  color: rgb(156, 0, 255);
-  border: 8px solid rgb(130, 44, 44);
-}
-
-.primary-box {
-  position: relative;
-  height: auto;
-  margin-top: 20px;
-  font-size: 23px;
-  width: 100px;
-  flex-grow: 1;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  border: 12px solid rgb(44, 71, 130);
-}
-
-.secondary-box {
-  position: relative;
-  margin-top: 20px;
-  height: auto;
-  font-size: 23px;
-  width: 13%;
-  flex-grow: 1;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  border: 12px solid rgb(44, 71, 130);
-}
-
-.tertiary-box {
-  position: sticky;
-  margin-top: 20px;
-  height: auto;
-  font-size: 23px;
-  width: 13%;
-  flex-grow: 1;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  border: 12px solid rgb(44, 71, 130);
-}
-
-.content-box {
-  position: sticky;
-  margin-top: 20px;
-  height: auto;
-  font-size: 23px;
-  width: 100%;
-  flex-grow: 1;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  border: 12px solid rgb(44, 71, 130);
-}
+  .nav-section {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0 20px;
+    background-color: rgba(158, 187, 88, 1);
+    height: 404px;
+    padding: 20px;
+  }
+  .nav-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0 auto;
+    background-color: rgba(158, 187, 88, 1);
+    height: 404px;
+    padding: 20px;
+    width: 100%;
+    align-self: stretch;
+    flex-grow: 1;
+    max-width: 1200px;
+  }
+  .content-wrapper {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-top: 20px;
+    overflow: auto;
+  }
+  .inner-content {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  .top-nav {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 7px solid;
+  }
+  .nav-row {
+    display: flex;
+    gap: 20px;
+  }
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 17%;
+    margin-left: 0;
+  }
+  .nav-link {
+    position: relative;
+    margin-top: 20px;
+    height: auto;
+    cursor: pointer;
+    pointer-events: auto;
+  }
+  .nav-spacer {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 17%;
+    margin-left: 20px;
+  }
+  .nav-text {
+    position: relative;
+    margin-top: 20px;
+    height: auto;
+  }
+  .bottom-nav {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-width: 7px;
+  }
+  .bottom-row {
+    display: flex;
+    gap: 20px;
+  }
 </style>
 
-<div class="column-container">
-  <div class="highlight-box">
-    <div class="accent-text">Enter some text...</div>
-  </div>
-  <div class="primary-box">Enter some text...</div>
-  <div class="secondary-box">Enter some text...</div>
-  <div class="tertiary-box">Enter some text...</div>
-  <div class="tertiary-box">Enter some text...</div>
-  <div class="tertiary-box">Enter some text...</div>
-  <div class="content-box">hbhjjhjhjhjhj</div>
-  <div class="content-box">Enter some text...</div>
-  <div class="content-box">Enter some text...</div>
+<div class="nav-section" data-el="nav-1">
+  <section class="nav-container">
+    <div class="content-wrapper">
+      <div class="inner-content">
+        <div class="top-nav">
+          <div class="nav-row">
+            <div class="nav-item">
+              <a href="mainpage.html" class="nav-link">Enter some text...</a>
+            </div>
+            <div class="nav-spacer"></div>
+            <div class="nav-spacer"></div>
+            <div class="nav-item">
+              <div class="nav-text">Enter some text...</div>
+            </div>
+            <div class="nav-spacer"></div>
+            <div class="nav-item">
+              <div class="nav-text">Enter some text...</div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-nav">
+          <div class="bottom-row">
+            <div class="nav-item">
+              <div class="nav-text">Enter some text...</div>
+            </div>
+            <div class="nav-item">
+              <div class="nav-text">Enter some text...</div>
+            </div>
+            <div class="nav-item">
+              <div class="nav-text">Enter some text...</div>
+            </div>
+            <div class="nav-spacer"></div>
+            <div class="nav-item">
+              <div class="nav-text">Enter some text...</div>
+            </div>
+            <div class="nav-spacer"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
+
+<script>
+(() => {
+  const state = {};
+  let context = null;
+  let nodesToDestroy = [];
+  let pendingUpdate = false;
+
+  function destroyAnyNodes() {
+    nodesToDestroy.forEach((el) => el.remove());
+    nodesToDestroy = [];
+  }
+
+  function update() {
+    if (pendingUpdate === true) {
+      return;
+    }
+    pendingUpdate = true;
+
+    document.querySelectorAll("[data-el='nav-1']").forEach((el) => {
+      el.setAttribute("maxWidth", 1200);
+      el.setAttribute("lazyLoad", false);
+    });
+
+    destroyAnyNodes();
+    pendingUpdate = false;
+  }
+
+  update();
+})();
+</script>
