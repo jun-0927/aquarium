@@ -1,41 +1,101 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Table Filter</title>
-  <style>
-    table { border-collapse: collapse; width: 100%; }
-    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-  </style>
-</head>
-<body>
-  <input type="text" id="filterInput" placeholder="Filter by name..." />
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Age</th>
-        <th>City</th>
-      </tr>
-    </thead>
-    <tbody id="tableBody">
-      <tr><td>Alice</td><td>25</td><td>New York</td></tr>
-      <tr><td>Bob</td><td>30</td><td>Los Angeles</td></tr>
-      <tr><td>Charlie</td><td>35</td><td>Chicago</td></tr>
-    </tbody>
-  </table>
+<style>
+.column-container {
+  position: relative;
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+  padding: 13px 0 0;
+}
 
-  <script>
-    const filterInput = document.getElementById('filterInput');
-    const tableBody = document.getElementById('tableBody');
-    filterInput.addEventListener('input', () => {
-      const filterText = filterInput.value.toLowerCase();
-      Array.from(tableBody.rows).forEach(row => {
-        const cellText = row.cells[0].textContent.toLowerCase();
-        row.style.display = cellText.includes(filterText) ? '' : 'none';
-      });
-    });
-  </script>
-</body>
-</html>
+.highlight-box {
+  position: sticky;
+  margin-top: 20px;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  background-color: rgb(219, 63, 63);
+}
+
+.accent-text {
+  position: sticky;
+  height: auto;
+  font-size: 23px;
+  width: auto;
+  flex-grow: 1;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background: rgb(0, 255, 178) no-repeat center/cover;
+  color: rgb(156, 0, 255);
+  border: 8px solid rgb(130, 44, 44);
+}
+
+.primary-box {
+  position: relative;
+  height: auto;
+  margin-top: 20px;
+  font-size: 23px;
+  width: 100px;
+  flex-grow: 1;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  border: 12px solid rgb(44, 71, 130);
+}
+
+.secondary-box {
+  position: relative;
+  margin-top: 20px;
+  height: auto;
+  font-size: 23px;
+  width: 13%;
+  flex-grow: 1;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  border: 12px solid rgb(44, 71, 130);
+}
+
+.tertiary-box {
+  position: sticky;
+  margin-top: 20px;
+  height: auto;
+  font-size: 23px;
+  width: 13%;
+  flex-grow: 1;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  border: 12px solid rgb(44, 71, 130);
+}
+
+.content-box {
+  position: sticky;
+  margin-top: 20px;
+  height: auto;
+  font-size: 23px;
+  width: 100%;
+  flex-grow: 1;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  border: 12px solid rgb(44, 71, 130);
+}
+</style>
+
+<div class="column-container">
+  <div class="highlight-box">
+    <div class="accent-text">Enter some text...</div>
+  </div>
+  <div class="primary-box">Enter some text...</div>
+  <div class="secondary-box">Enter some text...</div>
+  <div class="tertiary-box">Enter some text...</div>
+  <div class="tertiary-box">Enter some text...</div>
+  <div class="tertiary-box">Enter some text...</div>
+  <div class="content-box">hbhjjhjhjhjhj</div>
+  <div class="content-box">Enter some text...</div>
+  <div class="content-box">Enter some text...</div>
+</div>
